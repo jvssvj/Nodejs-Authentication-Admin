@@ -77,10 +77,10 @@ res.status(201).json(result)
 
 ### `authMiddleware.js`
 - Verifica o JWT (token) vindo no cabeçalho
-- Decodifica e anexa o usuário autenticado em req.authenticatedUser
+- Decodifica e anexa o usuário autenticado em `req.authenticatedUser`
 
 ### `adminMiddleware.js`
-- Confirma se req.authenticatedUser.role é "Adminitrador"
+- Confirma se `req.authenticatedUser.role` é "Adminitrador"
 - Se não for, retorna erro 403
 
 ## 👌 Rotas
@@ -89,7 +89,7 @@ res.status(201).json(result)
 - `POST /auth/register`
 - `POST /auth/login`
 
-### routes/protectedRoutes.js
+### `routes/protectedRoutes.js`
 - `GET /dashboard (exemplo)`
 - Protegida por `authMiddleware`
 
